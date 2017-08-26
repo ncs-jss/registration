@@ -40,7 +40,7 @@
               <b>Timings -</b> 1600 onwards
             </h2>
           </div>
-          <div class="col-sm-12 content--lower text-center">
+          <!-- <div class="col-sm-12 content--lower text-center">
             <ul>
               <li><a href="http://hackncs.com/" target="_blank"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a></li>
               <li>
@@ -50,7 +50,7 @@
               </li>
               <li><a href="https://github.com/ncs-jss" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
             </ul>
-          </div>
+          </div> -->
         </div>
         <div class="overlay"></div>
       </div>
