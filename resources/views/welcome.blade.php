@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-  <title>Interactive Web Forms</title>
+  <title>Registration | NCS</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,6 +12,7 @@
   <script type="text/javascript" src="{{ asset('InteractiveRegistrationForm/js/conversational-form.min.js') }}" crossorigin></script>
   <script type="text/javascript" src="{{ asset('InteractiveRegistrationForm/js/index.js') }}"></script>
   <link rel="stylesheet" href="{{ asset('InteractiveRegistrationForm/css/style.css') }}">
+  <link rel="shortcut icon" href="{{ asset('InteractiveRegistrationForm/assets/favicon.ico') }}" type="image/x-icon"/>
 </head>
 
 <body>
@@ -32,7 +33,12 @@
           </div>
           <div class="col-sm-12 content">
             <h1 class="heading--primary">Welcome to NCS.</h1>
-            <h2 class="heading--secondary">Register yourself for the OP?</h2>
+            <h2 class="heading--secondary">We all at Nibble are super excited for the Orientation Programme, hope you are too! Bring all your friends along, it's going to be full of surprises.</h2>
+            <h2 class="heading--secondary">
+              <b>Venue -</b> Multipurpose Hall<br>
+              <b>Date -</b> 30th August (Wed)<br>
+              <b>Timings -</b> 1600 onwards
+            </h2>
           </div>
           <div class="col-sm-12 content--lower text-center">
             <ul>
