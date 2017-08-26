@@ -24,7 +24,7 @@ window.onload = function(){
 
     function verify(res) {
         return $.ajax({
-            url: "http://localhost:8000/verify",
+            url: "/verify",
             type: "post",
             data: res,
             async: false,
@@ -111,7 +111,7 @@ window.onload = function(){
                 formDataSerialized['_token'] = $('input[type="hidden"]').val();
                 console.log(formDataSerialized['_token']);
                 console.log("Formdata, serialized:", formDataSerialized);
-                $.post("http://localhost:8000/register", formDataSerialized,
+                $.post("/register", formDataSerialized,
                 function(data){
                     if (data.status) {
                         conversationalForm.addRobotChatResponse("We have received your submission, Thank You!!");
