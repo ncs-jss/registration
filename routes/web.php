@@ -18,3 +18,6 @@ Route::get('/', function () {
 
 Route::post('/register', 'RegisterController@register');
 Route::post('/verify', 'RegisterController@verify');
+Route::get('{any?}', function() {
+    return Redirect::to('http://hackncs.com');
+});

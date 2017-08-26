@@ -9,10 +9,10 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="{{ asset('InteractiveRegistrationForm/js/conversational-form.min.js') }}" crossorigin></script>
-  <script type="text/javascript" src="{{ asset('InteractiveRegistrationForm/js/index.js') }}"></script>
-  <link rel="stylesheet" href="{{ asset('InteractiveRegistrationForm/css/style.css') }}">
-  <link rel="shortcut icon" href="{{ asset('InteractiveRegistrationForm/assets/favicon.ico') }}" type="image/x-icon"/>
+  <script type="text/javascript" src="{{ asset('public/InteractiveRegistrationForm/js/conversational-form.min.js') }}" crossorigin></script>
+  <script type="text/javascript" src="{{ asset('public/InteractiveRegistrationForm/js/index.js') }}"></script>
+  <link rel="stylesheet" href="{{ asset('public/InteractiveRegistrationForm/css/style.css') }}">
+  <link rel="shortcut icon" href="{{ asset('public/InteractiveRegistrationForm/assets/favicon.ico') }}" type="image/x-icon"/>
 </head>
 
 <body>
