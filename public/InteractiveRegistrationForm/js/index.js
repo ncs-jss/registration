@@ -84,7 +84,7 @@ window.onload = function(){
 
                         if($.inArray(branch, branches) < 0) {
                             $("textarea").val("");
-                            conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075 or 15cs075, Please try again");
+                            conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075, 15cs075 or 15dlcse, Please try again");
                             return error("Incorrect Admission No.");
                         }
 
