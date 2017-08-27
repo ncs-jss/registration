@@ -2,6 +2,7 @@
 
 <head>
   <title>Registration | NCS</title>
+  <link rel="shortcut icon" href="{{ asset('public/InteractiveRegistrationForm/assets/favicon.ico') }}" type="image/x-icon"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,7 +13,6 @@
   <script type="text/javascript" src="{{ asset('public/InteractiveRegistrationForm/js/conversational-form.min.js') }}" crossorigin></script>
   <script type="text/javascript" src="{{ asset('public/InteractiveRegistrationForm/js/index.js') }}"></script>
   <link rel="stylesheet" href="{{ asset('public/InteractiveRegistrationForm/css/style.css') }}">
-  <link rel="shortcut icon" href="{{ asset('public/InteractiveRegistrationForm/assets/favicon.ico') }}" type="image/x-icon"/>
 </head>
 
 <body>
@@ -28,31 +28,39 @@
     <div class="row">
       <div class="col-md-6 col-sm-12 section1">
         <div class="row">
-          <div class="col-sm-12 logo">
-            <h1 class="text-center">Nibble Computer Society</h1>
-          </div>
           <div class="col-sm-12 content">
-            <h1 class="heading--primary">Welcome to NCS.</h1>
-            <h2 class="heading--secondary">We all at Nibble are super excited for the Orientation Programme, hope you are too! Bring all your friends along, it's going to be full of surprises.</h2>
-            <h2 class="heading--secondary">
-              <b>Venue -</b> Multipurpose Hall<br>
-              <b>Date -</b> 30th August (Wed)<br>
-              <b>Timings -</b> 4:00 PM onwards
-            </h2>
+            <h1 class="heading--primary">Orientation Programme <br/> <span style="font-size: 60px;text-transform: lowercase;">2k17</span></h1>
           </div>
-          <!-- <div class="col-sm-12 content--lower text-center">
-            <ul>
-              <li><a href="http://hackncs.com/" target="_blank"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a></li>
-              <li>
-                <a href="https://www.facebook.com/nibblecomputersociety/" target="_blank">
-                  <fa class="fa fa-facebook fa-2x"></fa>
-                </a>
-              </li>
-              <li><a href="https://github.com/ncs-jss" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
-            </ul>
-          </div> -->
+          <div class="col-sm-12 details">
+            <span>Multipurpose Hall</span>
+            <span>Wednesday August 30th</span>
+            <span>4:00 PM onwards</span>
+          </div>
+          <div class="col-sm-12 footer">
+            <div class="col-sm-9 col-xs-8">
+                <img src="{{ asset('public/InteractiveRegistrationForm/assets/ncsncs_logo.png') }}" style="width: 190px;height: 100px;" alt="">
+            </div>
+            <div class="col-sm-3 col-xs-4 pull-right social-links">
+              <ul>
+                <li>
+                  <a href="http://hackncs.com/" target="_blank">
+                    <i class="fa fa-globe fa-2x" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/nibblecomputersociety/" target="_blank">
+                        <fa class="fa fa-facebook fa-2x"></fa>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/ncs-jss" target="_blank">
+                        <i class="fa fa-github fa-2x"></i>
+                    </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="overlay"></div>
       </div>
       <div class="col-md-6 col-sm-12 section2">
 

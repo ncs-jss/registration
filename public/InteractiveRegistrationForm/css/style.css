@@ -1,13 +1,15 @@
 // Remy function
-    @function remy($value) {
-      @return ($value / 16px) * 1rem;
-    }
-  div, body, html, span, h1, p, a, li, ul {
+@function remy($value) {
+    @return ($value / 16px) * 1rem;
+}
+
+div, body, html, span, h1, p, a, li, ul {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  }
-  body {
+}
+
+body {
     font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
     background: #e9e9e9;
     height: 100%;
@@ -15,144 +17,175 @@
     position: relative;
     top: 0;
     bottom: 0;
-  }
-  a,
-  [type="submit"] {
-    transition: all .25s ease-in;
-  }
+}
 
-  .logo {
+a, [type="submit"] {
+    transition: all .25s ease-in;
+}
+
+.logo {
     position: absolute;
     top: 25px;
     z-index: 2;
-  }
+}
 
-  .content {
-    position: absolute;
-    top: 35%;
-    z-index: 2;
-  }
+.content {
+    padding-top: 100px;
+}
 
-  .heading--primary {
-    font-size: 2.999rem;
+.heading--primary {
+    font-size: 4.2rem;
+    text-transform: uppercase;
     text-align: center;
-  }
+    line-height: 100px;
+}
 
-  .heading--secondary {
-    font-size: 1.914rem;
-    padding: 2rem;
+.details {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.details span {
+    /*background: rgba(0, 0, 0, 0.6);*/
+    /*box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.3);*/
+    border: 1px solid #fff;
+    width: 150px;
+    height: 70px;
     text-align: center;
-  }
-
-  .content--lower {
-    position: absolute;
-    bottom: 10%;
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-  }
-
-  .content--lower > ul > li {
-    display:inline-block;
-  }
-
-  .content--lower > ul > li > a {
-    display: block;
-    padding: 1em;
     color: #fff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  }
-  .section1 {
+.footer {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+.social-links {
+    height: 70px;
+}
+
+.social-links ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     height: 100%;
-    /*width: 50%;*/
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.section1 {
+    height: 100%;
     position: relative;
     padding: 0;
-
-    background: url(https://image.freepik.com/free-photo/desk-with-a-laptop-a-cup-of-coffee-and-a-calendar_1112-145.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .76), rgba(0, 0, 0, .76)), url(../assets/bg.jpg);
+    /*background: #3f8cff;*/
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-  }
-  .section2 {
+}
+
+.section2 {
     height: 100%;
     position: relative;
     padding: 0;
     /*width: 50%;*/
     /*visibility: hidden;*/
     overflow-y: auto;
-  }
+}
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,.76);
-  }
-
-  .form {
+.form {
     position: absolute;
     width: 100%;
     padding: 2.5rem;
     background: #fafafa;
     margin: 0;
-  }
-  .thumbnail__links {
+}
+
+.thumbnail__links {
     align-self: flex-end;
     width: 100%;
-  }
+}
 
-
-
-  .container__child {
+.container__child {
     /*width: 0%;*/
     height: 100%;
     color: #fff;
-  }
-  .thumbnail__logo,
-  .thumbnail__content,
-  .thumbnail__links {
+}
+
+.thumbnail__logo, .thumbnail__content, .thumbnail__links {
     position: relative;
     z-index: 2;
-  }
-  .thumbnail__logo {align-self: flex-start;}
-  .logo__shape {fill: #fff;}
-  .logo__text {
+}
+
+.thumbnail__logo {
+    align-self: flex-start;
+}
+
+.logo__shape {
+    fill: #fff;
+}
+
+.logo__text {
     display: inline-block;
     font-size: 2rem;
     font-weight: 700;
     vertical-align: bottom;
-  }
-  .thumbnail__content {align-self: center;}
-  h1,
-  h2 {
-    font-weight: 300;
-    color: rgba(255,255,255,1);
-  }
+}
 
-  .thumbnail__links a {
+.thumbnail__content {
+    align-self: center;
+}
+
+h1, h2 {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 1);
+}
+
+.thumbnail__links a {
     font-size: 1rem;
     color: #fff;
-    &:focus,
-    &:hover {color: rgba(255,255,255,.5);}
-  }
-  label {
+    &:focus, &:hover {
+        color: rgba(255, 255, 255, .5);
+    }
+}
+
+label {
     font-size: 1.5rem;
     text-transform: uppercase;
     color: #000;
-  }
-  .form-control {
+}
+
+.form-control {
     background-color: transparent;
     border-top: 0;
     border-right: 0;
     border-left: 0;
     border-radius: 0;
-    &:focus {border-color: #111;}
-  }
-  [type="text"] {color: #111;}
-  [type="password"] {color: #111;}
-  .btn--form {
+    &:focus {
+        border-color: #111;
+    }
+}
+
+[type="text"] {
+    color: #111;
+}
+
+[type="password"] {
+    color: #111;
+}
+
+.btn--form {
     padding: .5rem 2.5rem;
     font-size: .95rem;
     font-weight: 600;
@@ -160,108 +193,129 @@
     color: #fff;
     background: #111;
     border-radius: remy(35px);
-    &:focus,
-    &:hover {background: lighten(#111, 13%);}
-  }
-  .signup__link {
+    &:focus, &:hover {
+        background: lighten(#111, 13%);
+    }
+}
+
+.signup__link {
     font-size: .8rem;
     font-weight: 600;
     text-decoration: underline;
     color: #999;
-    &:focus,
-    &:hover {color: darken(#999, 13%);}
-  }
+    &:focus, &:hover {
+        color: darken(#999, 13%);
+    }
+}
 
-
-  #conversational-form {
+#conversational-form {
     width: 50%;
     position: absolute;
     right: 0 !important;
     left: 50%;
     /*height: 100%;*/
+}
 
-  }
-
-  .robot text {
+.robot text {
     color: #222;
     font-weight: 900;
     min-height: 42px;
     font-size: 13px;
-  }
+}
 
-  .robot thumb {
+.robot thumb {
     background-image: url("https://scontent.fdel1-2.fna.fbcdn.net/v/t1.0-9/10622937_309548509222455_115224413821752863_n.jpg?oh=5a5d2c009275d282151ba17bf1a11d11&oe=5A235439") !important;
-  }
+}
 
-  .robot text > p {
+.robot text>p {
     background-color: #ebebeb;
-  }
+}
 
-  cf-chat-response.user text {
+cf-chat-response.user text {
     color: #fff;
     font-weight: 900;
     min-height: 42px;
     font-size: 13px;
-  }
-  cf-chat-response.user text > p {
+}
+
+cf-chat-response.user text>p {
     background-color: #222 !important;
-  }
-  cf-input-button {
+}
+
+cf-input-button {
     background: #222 !important;
     border: none !important;
     color: #fff !important;
-  }
+}
 
-
-  .line {
+.line {
     width: 25px;
     height: 3px;
     margin: 4px 0;
     background-color: #222;
     border-radius: 20px;
-  }
+}
 
-  .button:hover > div {
+.button:hover>div {
     background-color: #fff;
-  }
+}
 
-  .button:hover {
-      cursor: pointer;
-  }
+.button:hover {
+    cursor: pointer;
+}
 
-  .button {
-      display: none;
-      position: fixed;
-      padding: 10px;
-      z-index: 101;
-  }
+.button {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    z-index: 101;
+}
 
-  @media screen and (max-width: 776px) {
-
+@media screen and (max-width: 776px) {
     body {
-      position: relative;
+        position: relative;
+    }
+    .heading--primary {
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .heading--primary span{
+        font-size: 25px !important;
+    }
+    .details {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    .details span{
+        border:none;
+        height: 40px;
+        width: 100%;
+    }
+    .social-links a{
+        font-size: 10px;
+    }
+    .footer{
+        right: 0;
     }
     #conversational-form {
-      width: 100%;
-      position: absolute;
-      right: 0 !important;
-      left: 0 !important;
-      top: 0 !important;
-      height: 100%;
+        width: 100%;
+        position: absolute;
+        right: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100%;
     }
-
-  .section1 {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    display: none;
-    z-index: 1000;
-  }
-
-  .button {
-    display: block;
-    z-index: 1002;
-  }
+    .section1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        display: none;
+        z-index: 1000;
+    }
+    .button {
+        display: block;
+        z-index: 1002;
+    }
 }
