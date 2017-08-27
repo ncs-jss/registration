@@ -34,7 +34,7 @@ window.onload = function(){
 
     function conversationforms() {
 
-        var branches = ['cse', 'cs', 'it', 'ec', 'eee', 'ce', 'me', 'ee', 'ic'];
+        var branches = ['cse', 'cs', 'it', 'ec', 'eee', 'ce', 'me', 'ee', 'ic', 'dlcse', 'dlcs', 'dlit', 'dlec', 'dleee', 'dlce', 'dlme', 'dlee', 'dlic'];
 
         var conversationalForm = window.cf.ConversationalForm.startTheConversation({
             formEl: document.getElementById("form"),
@@ -67,12 +67,16 @@ window.onload = function(){
                     var str = dto.tag.value;
                     str = str.toLowerCase();
 
-                    var re = /^[0-9]{2}[a-zA-Z]{2,3}[0-9]{3}$/;
+                    var re = /^[0-9]{2}[a-zA-Z]{2,5}[0-9]{3}$/;
 
                     if(re.test(dto.tag.value)){
                         var branch = "";
 
-                        if (/^[a-zA-Z]$/.test(str.charAt(4))) {
+                        if (/^[a-zA-Z]$/.test(str.charAt(6))) {
+                            branch = str.substr(2, 5);
+                        } else if(/^[a-zA-Z]$/.test(str.charAt(5))) {
+                            branch = str.substr(2, 4);
+                        } else if(/^[a-zA-Z]$/.test(str.charAt(4))) {
                             branch = str.substr(2, 3);
                         } else {
                             branch = str.substr(2, 2);

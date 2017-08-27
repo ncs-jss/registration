@@ -29,7 +29,7 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:register',
             'admission_no' => 'required|max:255|unique:register',
-            'mobile' => 'required|max:10',
+            'mobile' => 'required|max:10|min:10',
             'year' => 'required',
             ]
         );
