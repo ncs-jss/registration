@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label for="radio">
-                <input cf-questions="Hi, I'm Cersie, are you interested in our Orientation Programme ?" cf-label="Yes, let's begin!" type="radio" value="0">
+                <input cf-questions="Hi, I'm Cersei, are you interested in our Orientation Programme ?" cf-label="Yes, let's begin!" type="radio" value="0">
                     Let's Begin
               </label>
             </div>
