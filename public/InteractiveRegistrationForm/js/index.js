@@ -87,6 +87,18 @@ window.onload = function(){
                             conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075, 15cs075 or 15dlcse, Please try again");
                             return error("Incorrect Admission No.");
                         }
+                        if (parseInt(str.substr(0,2)) > 17 || parseInt(str.substr(0,2)) < 13)  {
+                            $("textarea").val("");
+                            conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075, 15cs075 or 15dlcse, Please try again");
+                            return error("Incorrect Admission No.");
+                        }
+
+                        if (parseInt(str.slice(-3)) < 1 || parseInt(str.slice(-3)) > 250)  {
+                            $("textarea").val("");
+                            conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075, 15cs075 or 15dlcse, Please try again");
+                            return error("Incorrect Admission No.");
+                        }
+
 
                         res = verify({'admission_no': dto.tag.value}).responseJSON;
                         if (res.status) {
@@ -118,7 +130,7 @@ window.onload = function(){
                         return error();
                     }
                 } else if(dto.tag.name == "mobile"){
-                    var re = /^[0-9]{10}$/;
+                    var re = /^[7-9]{2}[0-9]{8}$/;
                     if(re.test(dto.tag.value)) {
                         return success();
                     } else{
