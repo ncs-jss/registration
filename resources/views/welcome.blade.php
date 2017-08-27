@@ -37,7 +37,7 @@
             <h2 class="heading--secondary">
               <b>Venue -</b> Multipurpose Hall<br>
               <b>Date -</b> 30th August (Wed)<br>
-              <b>Timings -</b> 1600 onwards
+              <b>Timings -</b> 4:00 PM onwards
             </h2>
           </div>
           <!-- <div class="col-sm-12 content--lower text-center">
@@ -57,6 +57,7 @@
       <div class="col-md-6 col-sm-12 section2">
 
         <div class="form" style="visibility: hidden;">
+
           <form action="#" id="form">
             {{ csrf_field() }}
 
