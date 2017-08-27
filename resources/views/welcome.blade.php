@@ -66,7 +66,7 @@
             <div class="form-group">
               <label for="admission_no">Admission No.</label>
 
-              <input required class="form-control" cf-input-placeholder="Ex- 15cse075" cf-questions="Great to meet you, {previous-answer}! I'm a NCS web form, What is your Admission No. ?|Awesome, {previous-answer}! And What is your Admission No. ?" type="text" name="admission_no" id="admission_no" cf-error="Enter your admission no">
+              <input required class="form-control" cf-input-placeholder="Ex- 15cse075" cf-questions="Great to meet you, {previous-answer}! I'm a NCS web form, What is your Admission No. ?|Awesome, {previous-answer}! I'm a NCS web form, What is your Admission No. ?" type="text" name="admission_no" id="admission_no" cf-error="Enter your admission no">
             </div>
             <div class="form-group">
               <label for="year">Year</label>
