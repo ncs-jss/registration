@@ -33,6 +33,9 @@ window.onload = function(){
     }
 
     function conversationforms() {
+
+        var branches = ['cse', 'cs', 'it', 'ec', 'eee', 'ce', 'me', 'ee', 'ic'];
+
         var conversationalForm = window.cf.ConversationalForm.startTheConversation({
             formEl: document.getElementById("form"),
             // context: document.getElementById("cf-context"),
@@ -61,8 +64,25 @@ window.onload = function(){
                     }
                     //conversationalForm.stop("Stopping form, but added value");
                 } else if(dto.tag.id == "admission_no"){
-                    var re = /^[0-9]{2}\w{2,3}[0-9]{3}$/;
+                    var str = dto.tag.value;
+                    str = str.toLowerCase();
+
+                    var re = /^[0-9]{2}[a-zA-Z]{2,3}[0-9]{3}$/;
+
                     if(re.test(dto.tag.value)){
+                        var branch = "";
+
+                        if (/^[a-zA-Z]$/.test(str.charAt(4))) {
+                            branch = str.substr(2, 3);
+                        } else {
+                            branch = str.substr(2, 2);
+                        }
+
+                        if($.inArray(branch, branches) < 0) {
+                            $("textarea").val("");
+                            conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075 or 15cs075, Please try again");
+                            return error("Incorrect Admission No.");
+                        }
 
                         res = verify({'admission_no': dto.tag.value}).responseJSON;
                         if (res.status) {
@@ -71,12 +91,13 @@ window.onload = function(){
                             $("textarea").val("");
                             conversationalForm.addRobotChatResponse("Shit! Someone already took your Admission Number");
                             // $("cf-chat-response text p:last").css({"background-color": '#ff4c4c'});
-                            return error("Enter different admission no");
+                            return error("Enter different Admission No");
                         }
 
                     } else {
                         $("textarea").val("");
-                        return error();
+                        conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075 or 15cs075, Please try again");
+                        return error("Incorrect Admission No.");
                     }
                 } else if(dto.tag.name == "email"){
                     var re = /^\S+@\w+\.\w+$/;
@@ -103,7 +124,7 @@ window.onload = function(){
                     if(dto.tag.value[0] == "Yupp") {
                         return success();
                     } else{
-                        conversationalForm.addRobotChatResponse("Wants to make changes in the response, click on the respective answer to make changes.");
+                        conversationalForm.addRobotChatResponse("Wants to make changes in the response ?, click on the respective answer to make changes.");
                         return error();
                     }
                 }
