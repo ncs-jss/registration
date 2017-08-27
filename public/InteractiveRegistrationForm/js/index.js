@@ -54,8 +54,9 @@ window.onload = function(){
 
                 if(dto.tag.id == "name"){
                     if(dto.tag.value.trim() != ""){
+                        // conversationalForm.addRobotChatResponse("If you need to make any change, Click on your messages.");
                         return success();
-                    }else{
+                    }else {
                         return error();
                     }
                     //conversationalForm.stop("Stopping form, but added value");
@@ -67,12 +68,14 @@ window.onload = function(){
                         if (res.status) {
                             return success();
                         } else {
-                            conversationalForm.addRobotChatResponse("The student with this admission number is already registered");
+                            $("textarea").val("");
+                            conversationalForm.addRobotChatResponse("Shit! Someone already took your Admission Number");
                             // $("cf-chat-response text p:last").css({"background-color": '#ff4c4c'});
                             return error("Enter different admission no");
                         }
 
                     } else {
+                        $("textarea").val("");
                         return error();
                     }
                 } else if(dto.tag.name == "email"){
@@ -83,6 +86,7 @@ window.onload = function(){
                         if (res.status) {
                             return success();
                         } else {
+                            conversationalForm.addRobotChatResponse("Shit! Someone already took your Email Address");
                             return error("Email is already registered");
                         }
                     } else {
@@ -115,11 +119,10 @@ window.onload = function(){
                 function(data){
                     if (data.status) {
                         conversationalForm.addRobotChatResponse("We have received your submission, Thank You!!");
-                        // conversationalForm.addRobotChatResponse("Wants to fill another response");
+                        conversationalForm.addRobotChatResponse("See you in the OP 😊");
 
                     } else {
                         conversationalForm.addRobotChatResponse("Error, Please submit again");
-                        // conversationforms();
                     }
                 }, "json");
             }

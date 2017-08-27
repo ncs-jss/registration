@@ -56,23 +56,32 @@
       </div>
       <div class="col-md-6 col-sm-12 section2">
 
-        <div class="form" >
+        <div class="form" style="visibility: hidden;">
           <form action="#" id="form">
             {{ csrf_field() }}
+
+            <div class="form-group">
+              <label for="radio">
+                <input cf-questions="Hi, I'm Cersie, are you interested in our Orientation Programme ?" cf-label="Yes, let's begin!" type="radio" value="0">
+                    Let's Begin
+              </label>
+            </div>
+
             <div class="form-group">
               <label for="name">What's your name?</label>
-              <input required cf-questions="Hi there! What's your name? 😊" cf-error="Enter your name" type="text" class="form-control" name="name" id="name">
+                <input required cf-questions="Great! Tell me your name? 😊" cf-error="Enter your name" type="text" class="form-control" name="name" id="name">
             </div>
-            <div class="form-group">
-              <label for="admission_no">Admission No.</label>
 
-              <input required class="form-control" cf-input-placeholder="Ex- 15cse075" cf-questions="Great to meet you, {previous-answer}! I'm a NCS web form, What is your Admission No. ?|Awesome, {previous-answer}! I'm a NCS web form, What is your Admission No. ?" type="text" name="admission_no" id="admission_no" cf-error="Enter your admission no">
-            </div>
+              <div class="form-group">
+                <label for="admission_no">Admission No.</label>
+
+                <input required class="form-control" cf-input-placeholder="Ex- 15cse075, 15ec075 " cf-questions="Hello, {previous-answer}! What is your Admission No. ?|Nice to meet you, {previous-answer}! What is your Admission No. ?" type="text" name="admission_no" id="admission_no" cf-error="Enter your admission no">
+              </div>
             <div class="form-group">
               <label for="year">Year</label>
               <div class="radio">
               <label>
-                <input class="form-control" cf-questions="From which year you are?" type="radio" name="year" id="year-1" value="1">
+                <input class="form-control" cf-questions="You are from which year?" type="radio" name="year" id="year-1" value="1">
                 1 year
               </label>
               </div>
