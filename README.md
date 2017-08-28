@@ -1,8 +1,8 @@
 # InteractiveRegistrationForm
 
-It is a User Interactive Registration Form.
+This is an User Interactive Registration Form.
 
-# Installation and Contribution
+## Installation and Contribution
 
 ### Requirements :
 
