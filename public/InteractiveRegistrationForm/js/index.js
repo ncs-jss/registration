@@ -130,7 +130,7 @@ window.onload = function(){
                         return error();
                     }
                 } else if(dto.tag.name == "mobile"){
-                    var re = /^[7-9]{2}[0-9]{8}$/;
+                    var re = /^[7-9]{1}[0-9]{9}$/;
                     if(re.test(dto.tag.value)) {
                         return success();
                     } else{
@@ -156,7 +156,7 @@ window.onload = function(){
                 function(data){
                     if (data.status) {
                         conversationalForm.addRobotChatResponse("We have received your submission, Thank You!!");
-                        conversationalForm.addRobotChatResponse("See you in the OP 😊");
+                        conversationalForm.addRobotChatResponse("Get connected with us on our Facebook page for others events.");
 
                     } else {
                         conversationalForm.addRobotChatResponse("Error, Please submit again");
