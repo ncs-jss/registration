@@ -11,8 +11,10 @@
         'echo $PWD',
 	'git status',
 	'git branch',
+	'git log',
         'git pull origin master',
         'git status',
+	'git log',
     );
 
     // exec commands
