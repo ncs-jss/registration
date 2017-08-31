@@ -156,7 +156,7 @@ window.onload = function(){
                 function(data){
                     if (data.status) {
                         conversationalForm.addRobotChatResponse("We have received your submission, Thank You!!");
-                        conversationalForm.addRobotChatResponse("Get connected with us on our Facebook page for others events.");
+                        conversationalForm.addRobotChatResponse("Get connected with us on our Facebook page to get updated with our other events.");
 
                     } else {
                         conversationalForm.addRobotChatResponse("Error, Please submit again");
