@@ -54,3 +54,12 @@ This project will run on this server:
 ```
 http://localhost:8000/
 ```
+
+### Contribution
+
+1. Fork and clone the repo.
+2. Follow the installation procedure to make it run on your local system.
+3. Open an issue for adding any feature or to resolve any bug.
+4. Make your own branch and send pull request to that branch.
+
+* Always make branch and send PR, Dont merge code directly to the Master Branch as master branch is auto deployed to our website  [register.hackncs.com](http://register.hackncs.com)
