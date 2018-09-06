@@ -29,11 +29,11 @@
       <div class="col-md-6 col-sm-12 section1">
         <div class="row">
           <div class="col-sm-12 content">
-            <h1 class="heading--primary">Programming Workshop<br/> <span style="font-size: 60px;text-transform: lowercase;">2k17</span></h1>
+            <h1 class="heading--primary">Workshop on<br><span style="font-size: 6rem;">C</span><br>Programming</h1>
           </div>
           <div class="col-sm-12 details">
             <span>Computer Center</span>
-            <span>Thrusday-Friday</span>
+            <span>10-12 September</span>
             <span>4:30 PM onwards</span>
           </div>
           <div class="col-sm-12 footer">
@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label for="radio">
-                <input cf-questions="Hi, I'm Cersei, Have we met before in Orientation Programme?" cf-label="Yes, let's begin!" type="radio" value="0">
+                <input cf-questions="Hi, I'm Sophia, Have we met before in Orientation Programme?" cf-label="Yes, let's begin!" type="radio" value="0">
                     Let's Begin
               </label>
             </div>

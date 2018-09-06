@@ -24,7 +24,7 @@ window.onload = function(){
 
     function verify(res) {
         return $.ajax({
-            url: "/verify",
+            url: "http://localhost/laravel/registration/verify",
             type: "post",
             data: res,
             async: false,
@@ -152,7 +152,7 @@ window.onload = function(){
                 formDataSerialized['_token'] = $('input[type="hidden"]').val();
                 console.log(formDataSerialized['_token']);
                 console.log("Formdata, serialized:", formDataSerialized);
-                $.post("/register", formDataSerialized,
+                $.post("http://localhost/laravel/registration/register", formDataSerialized,
                 function(data){
                     if (data.status) {
                         conversationalForm.addRobotChatResponse("We have received your submission, Thank You!!");
