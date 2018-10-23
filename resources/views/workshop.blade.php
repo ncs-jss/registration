@@ -29,16 +29,16 @@
       <div class="col-md-6 col-sm-12 section1">
         <div class="row">
           <div class="col-sm-12 content">
-            <h1 class="heading--primary">Programming Workshop<br/> <span style="font-size: 60px;text-transform: lowercase;">2k17</span></h1>
+            <h1 class="heading--primary">Workshop on<br><span style="font-size: 6rem;">Web</span><br>Development</h1>
           </div>
           <div class="col-sm-12 details">
-            <span>Computer Center</span>
-            <span>Thrusday-Friday</span>
-            <span>4:30 PM onwards</span>
+            <span><b>Computer Center</b></span>
+            <span><b>25-26th October</b></span>
+            <span><b>4:30 PM Onwards</b></span>
           </div>
           <div class="col-sm-12 footer">
             <div class="col-sm-9 col-xs-8">
-                <img src="{{ asset('public/InteractiveRegistrationForm/assets/ncsncs_logo.png') }}" style="width: 190px;height: 100px;" alt="">
+                <img src="{{ asset('public/InteractiveRegistrationForm/assets/ncsncs_logo.png') }}" style="width: 152px;height: 80px;" alt="">
             </div>
             <div class="col-sm-3 col-xs-4 pull-right social-links">
               <ul>
@@ -71,7 +71,7 @@
 
             <div class="form-group">
               <label for="radio">
-                <input cf-questions="Hi, I'm Cersei, Have we met before in Orientation Programme?" cf-label="Yes, let's begin!" type="radio" value="0">
+                <input cf-questions="Hi, I'm Sophia, Have we met before in Design Workshop?" cf-label="Yes, let's begin!" type="radio" value="0">
                     Let's Begin
               </label>
             </div>
@@ -84,7 +84,7 @@
               <div class="form-group">
                 <label for="admission_no">Admission No.</label>
 
-                <input required class="form-control" cf-input-placeholder="Ex- 15cse075, 15ec075 " cf-questions="Hello, {previous-answer}! What is your Admission No. ?|Nice to meet you, {previous-answer}! What is your Admission No. ?" type="text" name="admission_no" id="admission_no" cf-error="Enter your admission no">
+                <input required class="form-control" cf-input-placeholder="Ex- 16cse075, 16ec075 " cf-questions="Hello, {previous-answer}! What is your Admission No. ?|Nice to meet you, {previous-answer}! What is your Admission No. ?" type="text" name="admission_no" id="admission_no" cf-error="Enter your admission no">
               </div>
             <div class="form-group">
               <label for="year">Year</label>

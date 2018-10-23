@@ -16,8 +16,8 @@ class CreateTableRegister extends Migration
         Schema::create('register', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('admission_no')->unique();
+            $table->string('email', 100)->unique();
+            $table->string('admission_no', 40)->unique();
             $table->tinyInteger('year');
             $table->string('mobile');
             $table->timestamps();
