@@ -24,7 +24,7 @@ window.onload = function(){
 
     function verify(res) {
         return $.ajax({
-            url: "http://localhost/laravel/registration/verify",
+            url: "http://192.168.0.110/registration/verify",
             type: "post",
             data: res,
             async: false,
@@ -87,7 +87,7 @@ window.onload = function(){
                             conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075, 15cs075 or 15dlcse, Please try again");
                             return error("Incorrect Admission No.");
                         }
-                        if (parseInt(str.substr(0,2)) > 17 || parseInt(str.substr(0,2)) < 13)  {
+                        if (parseInt(str.substr(0,2)) > 18 || parseInt(str.substr(0,2)) < 14)  {
                             $("textarea").val("");
                             conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075, 15cs075 or 15dlcse, Please try again");
                             return error("Incorrect Admission No.");
@@ -112,7 +112,7 @@ window.onload = function(){
 
                     } else {
                         $("textarea").val("");
-                        conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 15cse075 or 15cs075, Please try again");
+                        conversationalForm.addRobotChatResponse("Your Admission No. is Incorrect, It must be like 16cse075 or 16cs075, Please try again");
                         return error("Incorrect Admission No.");
                     }
                 } else if(dto.tag.name == "email"){
@@ -130,7 +130,7 @@ window.onload = function(){
                         return error();
                     }
                 } else if(dto.tag.name == "mobile"){
-                    var re = /^[7-9]{1}[0-9]{9}$/;
+                    var re = /^[6-9]{1}[0-9]{9}$/;
                     if(re.test(dto.tag.value)) {
                         return success();
                     } else{
@@ -152,7 +152,7 @@ window.onload = function(){
                 formDataSerialized['_token'] = $('input[type="hidden"]').val();
                 console.log(formDataSerialized['_token']);
                 console.log("Formdata, serialized:", formDataSerialized);
-                $.post("http://localhost/laravel/registration/register", formDataSerialized,
+                $.post("http://192.168.0.110/registration/register", formDataSerialized,
                 function(data){
                     if (data.status) {
                         conversationalForm.addRobotChatResponse("We have received your submission, Thank You!!");
