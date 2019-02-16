@@ -41,6 +41,13 @@ Migrate the database.
 ```php
 php artisan migrate
 ```
+```
+
+Seed the database.
+
+```php
+php artisan db:seed
+```
 
 
 Run this project on localhost
@@ -54,6 +61,11 @@ This project will run on this server:
 ```
 http://localhost:8000/
 ```
+
+### Admin Panel Details
+Link: http://localhost:8000/admin
+Username: admin
+Password: admin
 
 ### Contribution
 
